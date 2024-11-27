@@ -37,6 +37,33 @@ class caja<T>{
     }
 
 }
+
+class dosTipos<T,U>{
+    private T primer;
+    private U segundo;
+
+    public dosTipos(T primer, U segundo) {
+        this.primer = primer;
+        this.segundo = segundo;
+    }
+    public T getPrimer() {
+        return primer;
+    }
+    public void setPrimer(T primer) {
+        this.primer = primer;
+    }
+    public U getSegundo() {
+        return segundo;
+    }
+    public void setSegundo(U segundo) {
+        this.segundo = segundo;
+    }
+    @Override
+    public String toString() {
+        return "dosTipos [primer=" + primer + ", segundo=" + segundo + "]";
+    }    
+    
+}
 public class Generics {
     public static void main(String[] args) {
       GenericsMethods<String> impStr = new GenericsMethods<String>("Hola mundo");
@@ -53,6 +80,14 @@ public class Generics {
       cajaNums.ponerContenido(1);
       cajaNums.ponerContenido(3);
       System.out.println(cajaNums.obtenerContenido());
+
+      // genericos con multiples parametros
+      dosTipos<String, Integer> numsAndStr = new dosTipos<>("Hello", 1);
+      dosTipos<Double, Character> par2 = new dosTipos<>(3.1416, 'A');
+
+      System.out.println("Par 1 " + numsAndStr);
+      System.out.println("Par 2: " + par2);
+
     }
 
 
