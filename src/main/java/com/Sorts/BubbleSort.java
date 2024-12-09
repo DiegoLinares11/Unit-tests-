@@ -1,5 +1,6 @@
 package com.Sorts ;
 
+//Notacion O(n^2))
 public class BubbleSort {
     public static void bubbleSort(int[] arr) {
         int n = arr.length;
